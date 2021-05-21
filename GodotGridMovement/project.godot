@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Grid Movement (own)"
+run/main_scene="res://Scenes/Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+player="*res://Scenes/Player.tscn"
+
+[display]
+
+window/size/width=640
+window/size/height=640
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[input]
+
+un_occupy={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

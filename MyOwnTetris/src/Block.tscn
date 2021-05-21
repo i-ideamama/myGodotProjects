@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tile.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+scale = Vector2( 1.23077, 1.23077 )
+texture = ExtResource( 1 )
+centered = false

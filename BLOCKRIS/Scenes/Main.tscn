@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+
+[node name="Grid" type="TileMap"]
+format = 1
+script = ExtResource( 1 )
+
+[node name="BlockSpeed" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="BlockSpeedIncreaser" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="BlockCount" type="RichTextLabel" parent="."]
+margin_left = 256.0
+margin_top = 32.0
+margin_right = 320.0
+margin_bottom = 64.0
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlockCountText" type="RichTextLabel" parent="."]
+margin_left = 256.0
+margin_right = 320.0
+margin_bottom = 32.0
+text = "BLock 
+Count"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RowCount" type="RichTextLabel" parent="."]
+margin_left = 320.0
+margin_top = 32.0
+margin_right = 384.0
+margin_bottom = 64.0
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RowCountText" type="RichTextLabel" parent="."]
+margin_left = 320.0
+margin_right = 384.0
+margin_bottom = 32.0
+text = "Row
+Count"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="RichTextLabel" parent="."]
+margin_top = 256.0
+margin_right = 640.0
+margin_bottom = 384.0
+size_flags_vertical = 2
+text = "GAME OVER
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="BlockSpeed" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="BlockSpeedIncreaser" to="." method="_on_BlockSpeedIncreaser_timeout"]

@@ -1,0 +1,31 @@
+[
+{"name" : "Boss", "text" : "Greetings! Welcome to Office Corp. I am your boss."},
+{"name" : "Boss", "text" : "You have 7 weeks to show that you are useful."},
+{"name" : "Boss", "text" : "You must complete all the tasks that you are given!"},
+{"name" : "Boss", "text" : "...or else, you will be fired!"},
+{"name" : "Boss", "text" : "Enough chit chat. Now get to work!"},
+
+{"name" : "MOVEMENT", "text" : "Use 'A' and 'D' keys to move left and right."},
+{"name" : "MOVEMENT", "text" : "Press 'Space' to jump."},
+
+{"name" : "Co-worker", "text" : "I see you are new here."},
+{"name" : "Co-worker", "text" : "Now, don't walk around like that"},
+{"name" : "Co-worker", "text" : "...we don't tolerate gloomy behavior around here!"},
+{"name" : "Co-worker", "text" : "If you feel really sad just watch some TV"},
+
+{"name" : "TIP", "text" : "The blue bar indicates your happiness level."}, 
+{"name" : "TIP", "text" : "Staying next to the TV increases your happiness"}, 
+
+{"name" : "Co-worker", "text" : "but don't wait too long because time doesn't wait for anyone"},
+
+{"name" : "Co-worker", "text" : "Tired already? We can't have you slacking off."},
+{"name" : "Co-worker", "text" : "Grab a coffee to increase your energy."},
+
+{"name" : "TIP", "text" : "The green bar indicates your energy level."},
+{"name" : "TIP", "text" : "Staying next to the Coffee maker increases your energy"}, 
+
+
+{"name" : "Co-worker", "text" : "Now, you better get to work..."},
+
+{"name" : "TASK", "text" : "task1"}
+]

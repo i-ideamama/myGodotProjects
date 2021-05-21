@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/First_soundtrack.wav-f0db5297039f158b7f09878e4ffcb49f.sample"
+
+[deps]
+
+source_file="res://Assets/First_soundtrack.wav"
+dest_files=[ "res://.import/First_soundtrack.wav-f0db5297039f158b7f09878e4ffcb49f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

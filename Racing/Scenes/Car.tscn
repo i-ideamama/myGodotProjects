@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Sprites/Car/car-monster-tire.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Car/Car.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Car.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Driver/driver-body.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Driver/driver-head.png" type="Texture" id=5]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 38, 10 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 16.0
+
+[sub_resource type="PhysicsMaterial" id=4]
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 16.0
+
+[node name="Car" type="RigidBody2D"]
+mass = 300.0
+physics_material_override = SubResource( 1 )
+gravity_scale = 4.0
+script = ExtResource( 3 )
+
+[node name="Driver head" type="Sprite" parent="."]
+position = Vector2( -2.22725, -24.9452 )
+scale = Vector2( 0.213504, 0.213504 )
+texture = ExtResource( 5 )
+
+[node name="Driver body" type="Sprite" parent="."]
+position = Vector2( -2.00453, -14.2544 )
+scale = Vector2( 0.338786, 0.338786 )
+texture = ExtResource( 4 )
+
+[node name="CarBody" type="Sprite" parent="."]
+position = Vector2( -26, 0 )
+scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 2 )
+offset = Vector2( 64, -16 )
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+position = Vector2( -2, 2 )
+shape = SubResource( 2 )
+
+[node name="RearWheel" type="RigidBody2D" parent="."]
+position = Vector2( -32, 28 )
+mass = 5.10204
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RearWheel"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="RearWheel"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="RearWheel"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+softness = 0.03
+
+[node name="FrontWheel" type="RigidBody2D" parent="."]
+position = Vector2( 30, 28 )
+mass = 5.10204
+physics_material_override = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrontWheel"]
+shape = SubResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="FrontWheel"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="FrontWheel"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+softness = 0.03
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true

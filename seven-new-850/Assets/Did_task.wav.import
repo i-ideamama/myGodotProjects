@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Did_task.wav-234b5e83babeff754ae967a19e01df8f.sample"
+
+[deps]
+
+source_file="res://Assets/Did_task.wav"
+dest_files=[ "res://.import/Did_task.wav-234b5e83babeff754ae967a19e01df8f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

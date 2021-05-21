@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/tile.meshlib" type="MeshLibrary" id=1]
+[ext_resource path="res://Scripts/Dungeon.gd" type="Script" id=2]
+
+[node name="Dungeon" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+data = {
+"cells": PoolIntArray(  )
+}
+__meta__ = {
+"_editor_clip_": 0
+}

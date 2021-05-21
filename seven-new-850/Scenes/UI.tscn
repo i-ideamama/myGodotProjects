@@ -1,0 +1,285 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Scripts/progressBar.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Energy Icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Happiness Icon.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Heart Icon.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/dialog.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Elevator Controller.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Elevator_buttons/Button5.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Elevator_buttons/Button7.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Elevator_buttons/Button2.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Elevator_buttons/Button3.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Elevator_buttons/Button4.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Elevator_buttons/Button6.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Elevator_buttons/Button1.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/clock timer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/pixel.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Assets/MovementButtons/move_left_normal.png" type="Texture" id=16]
+[ext_resource path="res://Assets/MovementButtons/jump_pressed.png" type="Texture" id=17]
+[ext_resource path="res://Assets/MovementButtons/move_left_pressed.png" type="Texture" id=18]
+[ext_resource path="res://Assets/MovementButtons/move_right_normal.png" type="Texture" id=19]
+[ext_resource path="res://Assets/MovementButtons/jump_normal.png" type="Texture" id=20]
+[ext_resource path="res://Assets/MovementButtons/move_right_pressed.png" type="Texture" id=21]
+[ext_resource path="res://Scripts/UI.gd" type="Script" id=22]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 1, 0, 1 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0.882353, 1, 1 )
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.827451, 0.117647, 0.117647, 1 )
+corner_detail = 10
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 15 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 8, 8 )
+
+[node name="UI" type="Node2D"]
+z_index = 100
+script = ExtResource( 22 )
+
+[node name="Progress Bars" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Energy" type="ProgressBar" parent="Progress Bars"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 153.0
+margin_bottom = 18.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+step = 0.05
+value = 4.0
+percent_visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Progress Bars/Energy"]
+wait_time = 0.01
+autostart = true
+
+[node name="Sprite" type="Sprite" parent="Progress Bars/Energy"]
+position = Vector2( -1.5, 6.25 )
+scale = Vector2( 1, 1.07813 )
+texture = ExtResource( 2 )
+
+[node name="Happiness" type="ProgressBar" parent="Progress Bars"]
+margin_left = 3.0
+margin_top = 24.0
+margin_right = 153.0
+margin_bottom = 39.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+step = 0.05
+value = 20.0
+percent_visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Progress Bars/Happiness"]
+wait_time = 0.01
+autostart = true
+
+[node name="Sprite" type="Sprite" parent="Progress Bars/Happiness"]
+position = Vector2( 2, 6 )
+texture = ExtResource( 3 )
+
+[node name="Health" type="ProgressBar" parent="Progress Bars"]
+margin_left = 3.0
+margin_top = 45.0
+margin_right = 153.0
+margin_bottom = 60.0
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+step = 0.05
+value = 50.0
+percent_visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Progress Bars/Health"]
+wait_time = 0.01
+autostart = true
+
+[node name="Sprite" type="Sprite" parent="Progress Bars/Health"]
+position = Vector2( -1.5, 4.5 )
+scale = Vector2( 1.03125, 1.1875 )
+texture = ExtResource( 4 )
+
+[node name="Control" parent="." instance=ExtResource( 5 )]
+margin_left = 1.26
+margin_top = 63.0
+margin_right = 105.26
+margin_bottom = 223.0
+
+[node name="ElevatorController" type="Control" parent="."]
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="TextureButton" parent="ElevatorController"]
+margin_left = 160.0
+margin_right = 184.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureButton" parent="ElevatorController"]
+margin_left = 160.0
+margin_top = 32.0
+margin_right = 184.0
+margin_bottom = 56.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="TextureButton" parent="ElevatorController"]
+margin_left = 160.0
+margin_top = 64.0
+margin_right = 184.0
+margin_bottom = 88.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 10 )
+
+[node name="4" type="TextureButton" parent="ElevatorController"]
+margin_left = 160.0
+margin_top = 96.0
+margin_right = 184.0
+margin_bottom = 120.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 11 )
+
+[node name="5" type="TextureButton" parent="ElevatorController"]
+margin_left = 160.0
+margin_top = 128.0
+margin_right = 184.0
+margin_bottom = 152.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+
+[node name="6" type="TextureButton" parent="ElevatorController"]
+margin_left = 160.0
+margin_top = 160.0
+margin_right = 184.0
+margin_bottom = 184.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 12 )
+
+[node name="7" type="TextureButton" parent="ElevatorController"]
+margin_left = 160.0
+margin_top = 192.0
+margin_right = 184.0
+margin_bottom = 216.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clock Timer" parent="." instance=ExtResource( 14 )]
+position = Vector2( 477.84, 21.8779 )
+
+[node name="DayOf Week" type="Label" parent="."]
+margin_left = 382.588
+margin_top = 46.9243
+margin_right = 465.588
+margin_bottom = 62.9243
+custom_fonts/font = SubResource( 7 )
+text = "dfsdvdsvd"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DaysLeft" type="Label" parent="."]
+margin_left = 387.009
+margin_top = 71.3462
+margin_right = 462.009
+margin_bottom = 87.3462
+custom_fonts/font = SubResource( 7 )
+text = "vdsvdsvs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move_left" type="TouchScreenButton" parent="."]
+position = Vector2( 351, 193 )
+scale = Vector2( 3, 3 )
+normal = ExtResource( 16 )
+pressed = ExtResource( 18 )
+shape = SubResource( 8 )
+
+[node name="move_right" type="TouchScreenButton" parent="."]
+position = Vector2( 449, 193 )
+scale = Vector2( 3, 3 )
+normal = ExtResource( 19 )
+pressed = ExtResource( 21 )
+shape = SubResource( 9 )
+
+[node name="jump" type="TouchScreenButton" parent="."]
+position = Vector2( 400, 193 )
+scale = Vector2( 3, 3 )
+normal = ExtResource( 20 )
+pressed = ExtResource( 17 )
+shape = SubResource( 10 )
+[connection signal="timeout" from="Progress Bars/Energy/Timer" to="Progress Bars/Energy" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Progress Bars/Happiness/Timer" to="Progress Bars/Happiness" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Progress Bars/Health/Timer" to="Progress Bars/Health" method="_on_Timer_timeout"]
+[connection signal="pressed" from="ElevatorController/1" to="ElevatorController" method="_on_1_pressed"]
+[connection signal="pressed" from="ElevatorController/2" to="ElevatorController" method="_on_2_pressed"]
+[connection signal="pressed" from="ElevatorController/3" to="ElevatorController" method="_on_3_pressed"]
+[connection signal="pressed" from="ElevatorController/4" to="ElevatorController" method="_on_4_pressed"]
+[connection signal="pressed" from="ElevatorController/5" to="ElevatorController" method="_on_5_pressed"]
+[connection signal="pressed" from="ElevatorController/6" to="ElevatorController" method="_on_6_pressed"]
+[connection signal="pressed" from="ElevatorController/7" to="ElevatorController" method="_on_7_pressed"]
+[connection signal="pressed" from="move_left" to="." method="_on_move_left_pressed"]
+[connection signal="released" from="move_left" to="." method="_on_move_left_released"]
+[connection signal="pressed" from="move_right" to="." method="_on_move_right_pressed"]
+[connection signal="released" from="move_right" to="." method="_on_move_right_released"]
+[connection signal="pressed" from="jump" to="." method="_on_jump_pressed"]

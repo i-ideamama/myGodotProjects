@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Grid.gd" type="Script" id=1]
+[ext_resource path="res://TetrisGridBG.png" type="Texture" id=2]
+
+[node name="Grid" type="TileMap"]
+cell_size = Vector2( 32, 32 )
+format = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 608.0 ]
+}
+
+[node name="BG" type="TextureRect" parent="."]
+margin_right = 320.0
+margin_bottom = 640.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlockSpeed" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="BlockSlider" type="Timer" parent="."]
+pause_mode = 1
+autostart = true
+
+[node name="Lines_label" type="Label" parent="."]
+margin_right = 64.0
+margin_bottom = 32.0
+text = "LINES:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lines_count" type="Label" parent="."]
+margin_left = 64.0
+margin_right = 96.0
+margin_bottom = 32.0
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scores_label" type="Label" parent="."]
+margin_left = 96.0
+margin_right = 160.0
+margin_bottom = 32.0
+text = "SCORE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score_count" type="Label" parent="."]
+margin_left = 160.0
+margin_right = 192.0
+margin_bottom = 32.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 256.0
+margin_right = 320.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+margin_right = 12.0
+margin_bottom = 20.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="BlockSpeed" to="." method="_on_BlockSpeed_timeout"]
+[connection signal="timeout" from="BlockSlider" to="." method="_on_BlockSlider_timeout"]
+[connection signal="button_up" from="Control/Button" to="." method="_on_Button_button_up"]

@@ -1,0 +1,50 @@
+---: Basic Mechanics :---
+
+    On Start:
+        Welcome to office corp
+        You have 7 weeks to show that you can be useful
+
+        Use wasd to move
+
+    On Desk:
+        Use Space to jump
+
+    After Desk:
+        See that yellow bar?
+        Thats how much energy you have
+
+    On Coffee:
+        Get some coffe to restore your energy
+        We cant have you slacking off
+
+        Wait 5 seconds to refill your energy
+
+    On NPC:
+        Meet your coworkers
+        If you get too sad from overworking don't worry
+        They'll make sure you want to be happy
+
+    On TV
+        If you feel really sad just watch some tv but dont wait too long cause time doesnt wait for anyone
+
+---: Basic Mechanics Finished :---
+
+
+---: Task 1 - Printer :--
+
+    On Start:
+        Now that you've got a hang of our office, get to work !
+
+        Here is your first assignment
+        Get these documents printed
+        
+        Go to the cabinet to get some paper
+
+    On Cabinet:
+        Now go and print the documents out
+
+    On Printer:
+        Well done
+        Now go on to the next floor for your next job
+
+

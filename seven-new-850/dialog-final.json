@@ -1,0 +1,181 @@
+{
+    "start": [{
+            "name": "Boss",
+            "text": "Greetings\n! Welcome to Office Corp. I am your boss.                       "
+        },
+        {
+            "name": "Boss",
+            "text": "You have 7 weeks to show that you are useful.                          "
+        },
+        {
+            "name": "Boss",
+            "text": "You must complete all the tasks that you are given!                    "
+        },
+        {
+            "name": "Boss",
+            "text": "...or else, you will be fired!               "
+        },
+        {
+            "name": "Boss",
+            "text": "Enough chit chat. Now get to work!                           "
+        },
+        {
+            "name" : "TIP",
+            "text" : "Click on the home button to push the phone down and click on the phone again to bring it up"
+        },
+        {
+            "name": "MOVEMENT",
+            "text": "Use 'A' and 'D' keys to move left and right.            "
+        },
+        {
+            "name": "MOVEMENT",
+            "text": "Press 'Space' to jump."
+        }
+    ],
+    "npc": [{
+            "name": "Co-worker",
+            "text": "I see you are new here."
+        },
+        {
+            "name": "Co-worker",
+            "text": "Now, don't walk around like that"
+        },
+        {
+            "name": "Co-worker",
+            "text": "...we don't tolerate gloomy behavior around here!"
+        },
+        {
+            "name": "TIP",
+            "text": "The blue bar indicates your happiness level."
+        }
+    ],
+    "tv": [{
+            "name": "Co-worker",
+            "text": "If you feel really sad just watch some TV"
+        },
+        {
+            "name": "TIP",
+            "text": "Staying next to the TV increases your happiness"
+        },
+        {
+            "name": "Co-worker",
+            "text": "but don't wait too long because time doesn't wait for anyone"
+        },
+        {
+            "name": "Co-worker",
+            "text": "The timer on the top right shows how much time you have left today"
+        }
+    ],
+    "after-tv": [{
+            "name": "Co-worker",
+            "text": "Tired already? We can't have you slacking off."
+        },
+        {
+            "name": "Co-worker",
+            "text": "Grab a coffee to increase your energy."
+        }
+    ],
+    "coffee": [{
+            "name": "TIP",
+            "text": "Staying next to the Coffee maker increases your energy"
+        },
+        {
+            "name": "TIP",
+            "text": "The green bar indicates your energy level."
+        }
+    ],
+    "after-coffee": [{
+        "name": "Co-worker",
+        "text": "Now, you better get to work. Pull up the phone if you want to know what to do"
+    }],
+    "Grab some paper and print the documents": [{
+        "name": "Grab some paper and print the documents",
+        "text" : "",
+        "TasksToDo": [
+            "Find the paper on the 2nd floor",
+            "Find the printer and place the paper in it"
+        ]
+    }],
+    "after-Grab some paper and print the documents": [{
+        "name": "Grab some paper and print the documents","text" : "",
+        "TasksToDo": [
+            "Well done, as the documents print, here's your next task"
+    ]}],
+    "Find the boss's laptop charger and give it to him": [{
+        "name": "Find the boss's laptop charger and give it to him","text" : "",
+        "TasksToDo": [
+            "Find the boss' laptop charger",
+            "Bring it to the seventh floor"
+        ]
+    }],
+    "after-Find the boss's laptop charger and give it to him": [{
+        "name": "Find the boss's laptop charger and give it to him","text" : "",
+        "TasksToDo": [
+            "The boss is appeased",
+            "Now find fetch his chair"
+        ]
+    }],
+    "Find the boss's chair": [{
+        "name": "Find the boss's chair","text" : "",
+        "TasksToDo": [
+            "Find the boss' chair",
+            "Give it to him"
+        ]
+    }],
+    "after-Find the boss's chair": [{
+        "name": "Find the boss's chair","text" : "",
+        "TasksToDo": [
+            "Now that you've finally got used to the office",
+            "Get some clients"
+        ]
+    }],
+    "Answer the phone!": [{
+        "name": "Answer the phone!","text" : "",
+        "TasksToDo": [
+            "Find a phone that's ringing",
+            "Pick it up"
+        ]
+    }],
+    "after-Answer the phone!": [{
+        "name": "Answer the phone!","text" : "",
+        "TasksToDo": [
+            "Well done landing a new client",
+            "Your team needs to present a product to the boss"
+        ]
+    }],
+    "Find tools and Fix the projector": [{
+        "name": "Find tools and Fix the projector","text" : "",
+        "TasksToDo": [
+            "Get the tools to fix the projector",
+            "Repair the projector on the 5th floor"
+        ]
+    }],
+    "after-Find tools and Fix the projector": [{
+        "name": "Find tools and Fix the projector","text" : "",
+        "TasksToDo": [
+            "Well done fixing the projector",
+            "Organize the documents that you printed"
+        ]
+    }],
+    "Your documents have been printed! Grab some staplers for your documents. Dont't worry, it wont hurt!": [{
+        "name": "Your documents have been printed! Grab some staplers for your documents. Dont't worry, it wont hurt!","text" : "",
+        "TasksToDo": [
+            "Collect 50 staplers from your coworkers",
+            "Bring them to the printed documents"
+        ]
+    }],
+    "after-Your documents have been printed! Grab some staplers for your documents. Dont't worry, it wont hurt!": [{
+        "name": "Your documents have been printed! Grab some staplers for your documents. Dont't worry, it wont hurt!","text" : "",
+        "TasksToDo": [
+            "The boss has been doing some shady stuff",
+            "Get the documents to him to dethrone him"
+        ]
+    }],
+    "Get the documents to the bosses desk and become the boss": [{
+        "name": "Get the documents to the bosses desk and become the boss","text" : "",
+        "TasksToDo": [
+            "Sit on the boss' chair",
+            "Become the boss"
+        ]
+    }]
+}
