@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+speed = 1000
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 170.122, 60.0345 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 239.501, 61.3949 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 306.159, 62.7552 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 108.905, 60.0345 )
