@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/advancedCharacter.obj-66a27fe152a726404067f5bed9bd883a.mesh"
+
+[deps]
+
+files=[ "res://.import/advancedCharacter.obj-66a27fe152a726404067f5bed9bd883a.mesh" ]
+
+source_file="res://Assets/Blocky Characters/Models/Non-rigged/advancedCharacter.obj"
+dest_files=[ "res://.import/advancedCharacter.obj-66a27fe152a726404067f5bed9bd883a.mesh", "res://.import/advancedCharacter.obj-66a27fe152a726404067f5bed9bd883a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

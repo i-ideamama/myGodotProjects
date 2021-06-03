@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/IsoGrid.gd" type="Script" id=2]
+[ext_resource path="res://new_tileset.tres" type="TileSet" id=3]
+
+[node name="World" type="Node2D"]
+position = Vector2( 0, -120 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Blocks" type="TileMap" parent="."]
+position = Vector2( 0, 120 )
+mode = 1
+cell_size = Vector2( 32, 16 )
+centered_textures = true
+format = 1
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 232 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 8, 8 )
+format = 1

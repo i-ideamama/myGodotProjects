@@ -17,7 +17,7 @@ func generate_level():
 	walker.queue_free()
 	
 	for location in map:
-		tileMap.set_cell(location.x, location.y , 0)
+		tileMap.set_cell(location.x, location.y , -1)
 	tileMap.update_bitmask_region(borders.position, borders.end)
 
 

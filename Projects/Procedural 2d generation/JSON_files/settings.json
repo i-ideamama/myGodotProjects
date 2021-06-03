@@ -1,0 +1,24 @@
+{
+    "chunkSize" : 100,
+    "chunkBuffer" : 1,
+    "populatorSettings" :
+    {
+        "land" :
+        {
+            "seed" : 0,
+            "octaves" : 0,
+            "period" : 100.0,
+            "persistence" : 0.8,
+            "mult" : 3
+        },
+        "caves":
+        {
+            "seed" : 16,
+            "octaves" : 0,
+            "period" : 80.0,
+            "persistence" : 0.9
+        }
+    },
+    "currentChunk" :1,
+    "current-pos" : [112,-328]
+}
