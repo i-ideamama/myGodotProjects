@@ -1,5 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 10, 10 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1, 1, 1 )
 
 [node name="Main" type="Spatial"]
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="Ground" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="ComparisionCube" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+mesh = SubResource( 2 )
+material/0 = null
